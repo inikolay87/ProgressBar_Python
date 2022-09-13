@@ -17,10 +17,12 @@ def print_progress_bar(percentage: float, width: int = 20):
     rest_char_id = int((count - count_full) * len(PROGRESS_SYMBOLS))
     bar += PROGRESS_SYMBOLS[rest_char_id]
     bar += " " * (width - len(bar))
-    print(f"\r[{bar}] {percentage:5.1f}%", end="") sys.stdout.flush()
+    print(f"\r[{bar}] {percentage:5.1f}%", end="")
+    sys.stdout.flush()
     
 def clear_progress_bar(width: int = 20):
-    print("\r" + " " * (width + 10) + "\r", end="") sys.stdout.flush()
+    print("\r" + " " * (width + 10) + "\r", end="")
+    sys.stdout.flush()
     
 if __name__ == "__main__":
     complete = 0
